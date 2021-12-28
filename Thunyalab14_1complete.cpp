@@ -7,7 +7,7 @@ void stat(const double[],int,double[]);
 int main(){
     double A[] = {1.2,3.5,6.9,7.8,12.5,0.5};
     int N = sizeof(A)/sizeof(A[0]);
-    double B[6];
+    double B[6] ={0,0,0,0,0,0};
     stat(A,N,B);
     cout << "Arithmetic Mean = " << B[0];
     cout << "\nStandard Deviation = " << B[1];
@@ -18,6 +18,7 @@ int main(){
     return 0;
 }
 void stat(const double X[],int N,double Y[]){
+
     for(int i=0;i<N;i++){
         Y[0] += X[i];
     }
